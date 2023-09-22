@@ -1,0 +1,41 @@
+{
+  "name": "metafetcher",
+  "version": "0.0.1",
+  "description": "",
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "release": "pnpm run build && changeset publish",
+    "lint": "tsc"
+  },
+  "keywords": [
+    "meta tags",
+    "metadata",
+    "og",
+    "ogp",
+    "open graph",
+    "opengraph",
+    "fetch"
+  ],
+  "author": {
+    "name": "Tiago Carioca",
+    "url": "https://github.com/tiagokriok"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tiagokriok/metafetcher.git",
+    "web": "https://github.com/tiagokriok/metafetcher"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.26.2",
+    "@types/node": "^20.6.3",
+    "tsup": "^7.2.0",
+    "typescript": "^5.2.2"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts"
+}
